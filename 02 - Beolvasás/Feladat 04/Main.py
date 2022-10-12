@@ -1,10 +1,17 @@
-from xml.dom.minidom import NamedNodeMap
-
+from os import system
 
 name :str = None
 pressedKey :str = None
 
-name = input("\nAdja meg a nevét: ")
-pressedKey = input("Üssön le egy billentyűt ")
+
+print("Adja meg a nevét: ",end='')
+name = input()
+
+print("Üssön le egy billentyűt ",end='')
+pressedKey = input()
+
+
+system('cls')
+
 
 print(f"{name} ön a/az {pressedKey} billentyűt nyomta meg!")
