@@ -13,7 +13,7 @@ numberOne += 0.5
 print("Adja meg a második számot: ",end='')
 numberTwo = float(input())
 
-numberTwo += 0.7
+numberTwo -= 0.7
 
 print("Adja meg a harmadik számot: ",end='')
 numberThree = float(input())
