@@ -7,16 +7,18 @@ number = int(input())
 
 system('cls')
 
-if (number > 0 and (number % 2) == 0 and (number % 5) == 0):
-    print("A szám pozitív, páros és osztható öttel")
-elif (number > 0 and (number % 2) == 0 and number % 5):
-    print("A szám pozitív, páros de nem osztható öttel")
-elif (number > 0 and number % 2 and (number % 5) == 0):
-    print("A szám pozitív, osztható öttel de nem páros")
+print("A szám:")
+if ((number%2 == 0)):
+    print("Páros")
+elif (number%2):
+    print("Páratlan")
 
-elif (number < 0 and (number % 2) == 0 and (number % 5) == 0):
-    print("A szám negatív, páros és osztható öttel")
-elif (number < 0 and (number % 2) == 0 and number % 5):
-    print("A szám negatív, páros de nem osztható öttel")
-elif (number < 0 and number % 2 and (number % 5) == 0):
-    print("A szám negatív, osztható öttel de nem páros")
+if ((number >= 0)):
+    print("Pozitív")
+elif (number < 0):
+    print("Negatív")
+
+if ((number%5 == 0)):
+    print("Osztható öttel")
+elif (number%5):
+    print("Nem osztható öttel")
