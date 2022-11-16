@@ -87,9 +87,10 @@ else:
 
 system('cls')
 
-if ((eloetel == 1) and (foetel == 4) and ((koret == 3) or (koret == 5))):
+if ((eloetel == 1) and (foetel != 5) and (foetel != 3) and (foetel == 4) and ((koret == 3) or (koret == 5))):
     ertekeles = "Kiváló"
-
+else:
+    ertekeles = "Nem kiváló"
 
 print(f"A mai menü értékelése: {ertekeles}")
 print(f"A mai menü tartalma: {eloetelszoveg}, {foetelszoveg}, {koretszoveg}")
