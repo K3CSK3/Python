@@ -25,7 +25,7 @@ kola :bool = False
 
 ertekeles :str = None
 
-print("Előétel\n1-Zöldségleves\n2-Húsleves\n3-Gyümölcsleves\nMit választ: ",end='')
+print("Előétel\n1-Zöldségleves\n2-Húsleves\n3-Gyümölcsleves\n4-Semmi\nMit választ: ",end='')
 eloetel = int(input())
 if eloetel == 1:
     zoldsegleves = True
@@ -37,10 +37,10 @@ elif eloetel == 3:
     gyumolcsleves = True
     eloetelszoveg = "Gyümölcsleves"
 else:
-    print("Nincs ilyen opció")
+    print("Semmi")
     eloetelszoveg = "Semmi"
 
-print("Főétel:\n1-Sültcsirkecomb\n2-Sült csirkemell\n3-Rakottzöldség\n4-Spagetti\n5-Pizza\nMit választ: ",end='')
+print("Főétel:\n1-Sültcsirkecomb\n2-Sült csirkemell\n3-Rakottzöldség\n4-Spagetti\n5-Pizza\n6-Semmi\nMit választ: ",end='')
 foetel = int(input())
 if foetel == 1:
     sultCsirkecomb = True
@@ -58,10 +58,10 @@ elif foetel == 5:
     pizza = True
     foetelszoveg = "Pizza"
 else:
-    print("Nincs ilyen opció")
+    print("Semmi")
     foetelszoveg = "Semmi"
 
-print("Köret:\n1-Rizs\n2-Pároltzöldség\n3-Gyümölcs\n4-Sültkrumpli\n5-Saláta\n6-Kóla\nMit választ: ",end='')
+print("Köret:\n1-Rizs\n2-Pároltzöldség\n3-Gyümölcs\n4-Sültkrumpli\n5-Saláta\n6-Kóla\n7-Semmi\nMit választ: ",end='')
 koret = int(input())
 if koret == 1:
     rizs = True
@@ -82,15 +82,33 @@ elif koret == 6:
     kola = True
     koretszoveg = "Kóla"
 else:
-    print("Nincs ilyen opció")
+    print("Semmi")
     koretszoveg = "Semmi"
 
 system('cls')
-
-if ((eloetel == 1) and (foetel != 5) and (foetel != 3) and (foetel == 4) and ((koret == 3) or (koret == 5))):
+# -	zöldségleves, spagetti, gyümölcs vagy saláta, nem lehet pizza, rakottzöldség
+if (zoldsegleves and spagetti and (gyumolcs or salata) and ((pizza != True) or (rakottzoldseg != True))):
     ertekeles = "Kiváló"
+
+# zöldségleves, sült csirkemell, és biztos nem tartalmaz sültkrumplit, de rizst igen
+elif(zoldsegleves and sultCsirkemell and (sultkrumpli != True) and rizs):
+    ertekeles = "Fittnesz menü"
+
+# húsleves, sült csirkecomb, sültkrumpli és saláta, és biztosan nincs pizza, rakottzöldség
+elif (husleves and sultCsirkecomb and (sultkrumpli or salata) and (pizza != True and rakottzoldseg != True)):
+    ertekeles = "Vasárnapi menü"
+
+# pizza vagy spagetti, gyümölcs, kóla a kínálatban és biztosan nincs rakottzöldség, pároltzöldség
+elif ((pizza or spagetti) and (gyumolcs or kola) and (rakottzoldseg != True and paroltzoldseg != True)):
+    ertekeles = "Napi menü"
+
+#Semmi
+elif ((eloetel >= 5) and (foetel >= 6) and (koret >= 7)):
+    ertekeles = "Semmi"
+
+#Egyéni
 else:
-    ertekeles = "Nem kiváló"
+    ertekeles = "Egyéni"
 
 print(f"A mai menü értékelése: {ertekeles}")
 print(f"A mai menü tartalma: {eloetelszoveg}, {foetelszoveg}, {koretszoveg}")
