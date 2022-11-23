@@ -30,12 +30,15 @@ eloetel = int(input())
 if eloetel == 1:
     zoldsegleves = True
     eloetelszoveg = "Zöldségleves"
+
 elif eloetel == 2:
     husleves = True
     eloetelszoveg = "Húsleves"
+
 elif eloetel == 3: 
     gyumolcsleves = True
     eloetelszoveg = "Gyümölcsleves"
+
 else:
     print("Semmi")
     eloetelszoveg = "Semmi"
@@ -45,18 +48,23 @@ foetel = int(input())
 if foetel == 1:
     sultCsirkecomb = True
     foetelszoveg = "Sültcsirkecomb"
+
 elif foetel == 2:
     sultCsirkemell = True
     foetelszoveg = "Sült csirkemell"
+
 elif foetel == 3: 
     rakottzoldseg = True
     foetelszoveg = "Rakottzöldség"
+
 elif foetel == 4: 
     spagetti = True
     foetelszoveg = "Spagetti"
+
 elif foetel == 5: 
     pizza = True
     foetelszoveg = "Pizza"
+
 else:
     print("Semmi")
     foetelszoveg = "Semmi"
@@ -66,21 +74,27 @@ koret = int(input())
 if koret == 1:
     rizs = True
     koretszoveg = "Rizs"
+
 elif koret == 2:
     paroltzoldseg = True
     koretszoveg = "Pároltzöldség"
+
 elif koret == 3: 
     gyumolcs = True
     koretszoveg = "Gyümölcs"
+
 elif koret == 4: 
     sultkrumpli = True
     koretszoveg = "Sültkrumpli"
+
 elif koret == 5: 
     salata = True
     koretszoveg = "Saláta"
+
 elif koret == 6: 
     kola = True
     koretszoveg = "Kóla"
+
 else:
     print("Semmi")
     koretszoveg = "Semmi"
