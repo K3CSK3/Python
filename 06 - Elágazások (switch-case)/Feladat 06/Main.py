@@ -20,6 +20,6 @@ match connectionType:
     case "k":
         print(f"A téglalap kerülete: {(oldal1 + oldal2) * 2}")
     case "á":
-        print(f"A téglalap átlója{sqrt((oldal1 * oldal1) + (oldal2 * oldal2))}")
+        print(f"A téglalap átlója: {round(sqrt((oldal1 * oldal1) + (oldal2 * oldal2)),2)}")
     case _:
         print("Nincs ilyen művelet")
