@@ -14,7 +14,7 @@ connectionType = input()
 system('cls')
 
 match connectionType:
-    case ["p","P"]:
-        print((resistance1+resistance2)/(resistance1*resistance2))
-    case ["s","S"]:
+    case "p"|"P":
+        print((resistance1*resistance2)/(resistance1+resistance2))
+    case "s"|"S":
         print(resistance1+resistance2)
