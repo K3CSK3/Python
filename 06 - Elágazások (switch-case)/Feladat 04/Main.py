@@ -5,11 +5,11 @@ number2 :int = None
 operation :int = None
 
 print("Adjon meg egy számot:",end='')
-number1 = int(input())
+number1 = int(input().strip())
 print("Adjon meg még egy számot:",end='')
-number2 = int(input())
+number2 = int(input().strip())
 print("Adjon meg egy műveleti jelet:",end='')
-operation = input()
+operation = input().strip()
 
 system('cls')
 

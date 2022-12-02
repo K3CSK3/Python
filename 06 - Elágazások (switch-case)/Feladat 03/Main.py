@@ -3,7 +3,7 @@ from os import system
 drink :int = None
 
 print("Adja meg a kívánt italt(1-4)",end='')
-drink = int(input())
+drink = int(input().strip())
 
 system('cls')
 

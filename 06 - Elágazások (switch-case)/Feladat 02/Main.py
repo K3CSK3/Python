@@ -3,7 +3,7 @@ from os import system
 month :str = None
 
 print("Adja meg egy hónap nevét(pl:Január)",end='')
-month = str(input())
+month = input().strip().lower()
 
 system('cls')
 

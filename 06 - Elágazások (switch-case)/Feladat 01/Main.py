@@ -3,7 +3,7 @@ from os import system
 day :int = None
 
 print("Adja meg a hét egyik napját (szám):",end='')
-day = int(input())
+day = int(input().strip())
 
 system('cls')
 

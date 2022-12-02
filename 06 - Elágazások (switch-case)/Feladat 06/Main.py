@@ -6,11 +6,11 @@ oldal2 :int = None
 connectionType :str = None
 
 print("Adja meg az egyik oldal hosszát: ",end='')
-oldal1 = int(input())
+oldal1 = int(input().strip())
 print("Adja meg a másik oldal hosszát: ",end='')
-oldal2 = int(input())
+oldal2 = int(input().strip())
 print("Adja meg a művelet típusát(terület, kerület, átló): ",end='')
-connectionType = input()
+connectionType = input().strip().lower()
 
 system('cls')
 

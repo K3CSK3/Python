@@ -6,11 +6,16 @@ start = int(input())
 print("Adja meg a végső értéket: ", end='')
 end = int(input())
 
-if (start < end):
-    for i in range(start, end+1):
+if (start > end):
+    osszeg = 0
+    for i in range(end, start-1, -1):
         if (i % 2):
-            print(i)
+            if (i % 3 == 0):
+                osszeg += 1
+
 else: 
-    for i in range(end, start+1):
+    osszeg = 0
+    for i in range(start, end-1, -1):
         if (i % 2):
-            print(i)
+            if (i % 3 == 0):
+                osszeg += 1
