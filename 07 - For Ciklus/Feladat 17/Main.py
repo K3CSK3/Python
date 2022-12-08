@@ -1,6 +1,6 @@
 start :int = None
 end :int = None
-osszeg :int = None
+osszeg :int = 0
 mennyiseg :int = 1
 
 print("--------------------------")

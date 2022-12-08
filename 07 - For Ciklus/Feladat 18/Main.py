@@ -1,5 +1,5 @@
-start :int = 0
-end :int = 0
+start :int = None
+end :int = None
 osszeg :int = 0
 elsoSzam :int = 0
 masodikSzam :int = 0
