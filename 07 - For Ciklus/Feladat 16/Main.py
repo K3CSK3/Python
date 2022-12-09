@@ -15,7 +15,7 @@ if (start > end):
         if (i % 2 == 0):
             osszeg1 += i
             mennyiseg1 += 1
-        if (i % 2):
+        else:
             osszeg2 += i
             mennyiseg2 += 1
     print(f"Páros zsámok átlaga: {osszeg1/mennyiseg1}")
@@ -26,7 +26,7 @@ else:
         if (i % 2 == 0):
             osszeg1 += i
             mennyiseg1 += 1
-        if (i % 2):
+        else:
             osszeg2 += i
             mennyiseg2 += 1
     print(f"Páros zsámok átlaga: {osszeg1/mennyiseg1}")
