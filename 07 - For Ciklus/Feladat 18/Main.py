@@ -11,22 +11,12 @@ start = int(input())
 print("Adja meg a végső értéket: ", end='')
 end = int(input())
 
-if (start > end):
-    for i in range(end, start+1, 1):
-        if elso:
-            osszeg += i
-            elso = False
-        else:
-            osszeg -= i
-            elso = True
-    print(osszeg)
 
-else: 
-    for i in range(start, end+1, 1):
-        if elso:
-            osszeg += i
-            elso = False
-        else:
-            osszeg -= i
-            elso = True
-    print(osszeg)
+for i in range(end, start+1, 1):
+    if elso:
+        osszeg += i
+        elso = False
+    else:
+        osszeg -= i
+        elso = True
+print(osszeg)

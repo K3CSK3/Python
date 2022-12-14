@@ -9,14 +9,8 @@ start = int(input())
 print("Adja meg a végső értéket: ", end='')
 end = int(input())
 
-if (start > end):
-    for i in range(start, end-1, -1):
-        osszeg += i
-        mennyiseg += 1
-    print(osszeg / mennyiseg)
-    
-else: 
-    for i in range(end, start-1, -1):
-        osszeg += i
-        mennyiseg += 1
-    print(osszeg / mennyiseg)
+
+for i in range(start, end-1, -1):
+    osszeg += i
+    mennyiseg += 1
+print(osszeg / mennyiseg)

@@ -6,7 +6,8 @@ start = int(input())
 print("Adja meg a végső értéket: ", end='')
 end = int(input())
 
+if (start % 2):
+    start += 1
 
-for i in range(start, end-1, -1):
-    if (i % 2 == 0):
-        print(i)
+for i in range(start, end+1, 2):
+    print(i)

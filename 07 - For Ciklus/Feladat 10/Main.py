@@ -10,14 +10,8 @@ start = int(input())
 print("Adja meg a végső értéket: ", end='')
 end = int(input())
 
-if (start > end):
-    for i in range(start, end-1, -1):
-        osszeg += i
-        osszeg2 = osszeg2 * i
-    print(f" Az Összegük: {osszeg}\n A szorzatuk: {osszeg2}")
-    
-else: 
-    for i in range(end, start-1, -1):
-        osszeg += i
-        osszeg2 = osszeg2 * i
-    print(f" Az összegük: {osszeg}\n A szorzatuk: {osszeg2}")
+
+for i in range(start, end-1, -1):
+    osszeg += i
+    osszeg2 = osszeg2 * i
+print(f" Az Összegük: {osszeg}\n A szorzatuk: {osszeg2}")
