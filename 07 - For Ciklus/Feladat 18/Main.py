@@ -1,9 +1,6 @@
 start :int = None
 end :int = None
 osszeg :int = 0
-elsoSzam :int = 0
-masodikSzam :int = 0
-elso :bool = True
 
 print("--------------------------")
 print("Adja meg a kezdő értéket: ", end='')
@@ -12,11 +9,8 @@ print("Adja meg a végső értéket: ", end='')
 end = int(input())
 
 
-for i in range(end, start+1, 1):
-    if elso:
-        osszeg += i
-        elso = False
-    else:
-        osszeg -= i
-        elso = True
+for i in range(start, end+1, 2):
+    osszeg += i
+for i in range(start+1, end+1, 2):
+    osszeg += (i*-1)
 print(osszeg)
